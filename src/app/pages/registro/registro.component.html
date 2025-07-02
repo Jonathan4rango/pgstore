@@ -1,0 +1,31 @@
+<div class="btn-regreso" [routerLink]="''">
+  <div class="container-regreso">
+    <img src="/imagenes/box-arrow-left.svg" alt="User">
+    <p class="texto-inicio">Iniciar sesión</p>
+  </div> 
+</div>
+<div class="container">
+ 
+  <div class="card-container">
+    <form class="form-container" [formGroup]="login_Registro" (ngSubmit)="guardar()">
+        <input type="text" formControlName="id" placeholder="ID">
+        <input type="text" formControlName="name" placeholder="Nombre">
+        <input type="text" formControlName="last_name" placeholder="Apellido">
+        <input type="text" formControlName="adress" placeholder="Dirección">
+        <input type="password" formControlName="password" placeholder="Contraseña">
+         <!-- Select de Perfiles -->
+      <div class="dropdown-container">
+        <label for="perfil" class="dropdown-label">Perfil:</label>
+        <select formControlName="perfil">
+          <option value="">Seleccione un perfil</option>
+          <option *ngFor="let perfil of perfiles" [value]="perfil.nombre">
+            {{ perfil.nombre }}
+          </option>
+        </select>
+               
+      </div>
+        <button class="btn" type="submit" [disabled]="!login_Registro.valid">Registrar</button>
+      </form>
+      
+</div>
+</div>

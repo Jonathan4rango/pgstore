@@ -1,0 +1,42 @@
+.container{
+    height: 10vh;
+    width: 100vw;
+    background-color: var(--gray-200);
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+   
+}
+
+.nav-links a:hover{
+    color: var(--gray-500);
+   
+}
+
+ul{
+    list-style: none;
+    
+}
+li a{
+    text-decoration: none;    
+    color: var(--text);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.containermenu{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}

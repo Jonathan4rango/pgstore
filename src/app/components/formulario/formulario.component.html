@@ -1,0 +1,11 @@
+
+<div class="formu">
+    <p>formulario works!</p>
+</div>
+
+<app-registro [mensaje]="mensajePadre" (notificarPadre)="recibirNotificacion($event)"></app-registro>
+@if(mensaje){
+    <p>{{mensaje}}</p>
+} 
+
+<p>{{servicioMensaje}}</p>
